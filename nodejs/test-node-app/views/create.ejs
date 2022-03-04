@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Test Node | <%= title %></title>
+            <link href="css/style.css" rel="stylesheet">
+        </head>
+        <body>
+
+            <nav>
+                <div>
+                    <a href="/"><h1>abc</h1></a>
+                    <p>avc</p>
+                </div>
+                <ul>
+                    <li><a href="/">blog</a></li>
+                    <li><a href="/about">blog</a></li>
+                    <li><a href="/blog/create">blog</a></li>
+                </ul>
+            </nav>
+            <div class="blogs content">
+                <form action="/blog" method="post">
+                    <div class="form-group">
+                        <label for="">Blog title</label>
+                        <input type="text" name="title" id="title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="snipped">Blog snipped</label>
+                        <input type="text" name="snippet" id="snipped">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Blog body</label>
+                        <textarea name="body" id="body" cols="30" rows="10"
+                            required></textarea>
+                    </div>
+
+
+
+                    <button>submit</button>
+                </form>
+            </div>
+        </body>
+    </html>

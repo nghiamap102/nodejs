@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test Node | <%= title  %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- <% const name = 'mario' %> // khai báo biến  sau đó đổ ra bằng cách <%= name %>--> 
+
+    <%- include('./partial/nav.ejs') %>
+    
+    <div class="blogs content">
+        <%  if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+                <a href="/blog/<%= blog._id %>">
+                    <h3><%= blog.title %></h3>
+                    <p><%= blog.snippet %></p>
+                </a> 
+            <% }) %>
+        <% }else { %>
+            <p>there are no blog</p>
+        <% }%>
+        
+    </div>
+    <%- include('./partial/footer.ejs') %>
+
+</body>
+</html>
